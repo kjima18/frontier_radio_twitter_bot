@@ -1,7 +1,6 @@
 import json
 
-
-def hello(event, context):
+def tweet(event, context):
     body = {
         "message": "Go Serverless v1.0! Your function executed successfully!",
         "input": event
