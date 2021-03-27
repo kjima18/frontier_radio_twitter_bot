@@ -1,0 +1,1 @@
+schedule: cron(00 0/6 * * ? *)
