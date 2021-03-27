@@ -39,17 +39,15 @@ while True:
   except:
       break
 
-target_video = random.choice(searches)
-
-HASH_TAGS = '#フロンティアラジオ #建築 #まちづくり #HEAD研究会'
-
-tweet_text = f'''
-{target_video[1]}
-{target_video[0]}
-{HASH_TAGS}
-'''
-
 def tweet(event, context):
+  target_video = random.choice(searches)
+  tweet_text = f'''
+  {target_video[1]}
+  {target_video[0]}
+
+  #フロンティアラジオ #建築 #まちづくり #HEAD研究会
+  '''
+
   auth = tweepy.OAuthHandler(os.environ['TW_CONSUMER_KEY'], os.environ['TW_CONSUMER_SECRET'])
   auth.set_access_token(os.environ['TW_ACCESS_TOKEN'], os.environ['TW_ACCESS_TOKEN_SECRET'])
   api = tweepy.API(auth)
